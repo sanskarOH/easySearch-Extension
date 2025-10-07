@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EasySearch</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">EasySearch</h1>
+
+    <label class="label">
+      Search term
+      <input id="query" type="text" placeholder="e.g. simba 2" autocomplete="off" />
+    </label>
+
+    <label class="label">
+      Filetype
+      <select id="filetype">
+        <option value="">Any</option>
+        <option value="pdf">pdf</option>
+        <option value="mp4">mp4</option>
+        <option value="mov">mov</option>
+        <option value="mp3">mp3</option>
+        <option value="txt">txt</option>
+        <option value="csv">csv</option>
+      </select>
+    </label>
+
+    <label class="checkbox">
+      <input id="exact" type="checkbox" />
+      <span>Exact phrase</span>
+    </label>
+
+    <div id="preview" class="preview" aria-live="polite">Preview: —</div>
+
+    <div class="row">
+      <button id="searchBtn" class="btn" disabled>Search</button>
+      <button id="clearBtn" class="btn ghost">Clear</button>
+    </div>
+
+    <small class="help">
+      Use for legitimate/public content. The extension only constructs search queries and opens Google.
+    </small>
+  </main>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
